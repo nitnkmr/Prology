@@ -1,4 +1,4 @@
-import logo from "./assets/image/companylogo.png"
+import logo from "../assets/image/companylogo.png"
 function Footer() {
     return (
       <footer className="bg-slate-100" id='contact'>

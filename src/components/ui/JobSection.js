@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { jobsData } from "../data/jobsData";
+import { jobsData } from "../../data/jobsData";
 
 function JobSection() {
   const [tag, setTag] = useState("Job");

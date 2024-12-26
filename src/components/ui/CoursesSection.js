@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const courses = [
   {
@@ -58,12 +59,12 @@ function CoursesSection() {
                 <p className="text-sm text-gray-600 flex items-center mt-2">
                   <span className="text-yellow-500 mr-2">★</span> {course.rating} | {course.learners}
                 </p>
-                <a
-                  href={course.link}
+                <Link
+                  to='details'
                   className="text-blue-500 text-sm font-medium hover:underline mt-2 inline-block"
                 >
                   Know more &gt;
-                </a>
+                </Link>
               </div>
             </div>
           ))}

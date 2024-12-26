@@ -1,6 +1,7 @@
 import React from "react";
-import logo from "./assets/image/companylogo.png"; // Replace with your logo file path
+import logo from "../assets/image/companylogo.png"; // Replace with your logo file path
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,24 +11,24 @@ function Navbar() {
 
 
         {/* Logo */}
-        <a href="/" className="text-xl font-bold text-gray-800">
+        <Link to="/" className="text-xl font-bold text-gray-800">
           <img
             src={logo} // Using the imported logo file
             alt="Logo"
             className="h-[60px]" // Adjust height as needed
             />
-        </a>
+        </Link>
         
 
 
         {/* Navigation Links */}
         <div className="hidden lg:flex space-x-6">
-          <a
-            href="/home"
+          <Link
+            to="/"
             className="text-gray-600 hover:text-blue-500 font-medium"
             >
             Home
-          </a>
+          </Link>
           <a
             href="/about"
             className="text-gray-600 hover:text-blue-500 font-medium"
@@ -66,10 +67,14 @@ function Navbar() {
         {/* Buttons */}
         <div className="hidden lg:flex space-x-2">
           <button className="p-2 px-5 text-blue-500 border border-blue-500 rounded-md hover:bg-blue-100">
-            Log In
+            <Link to="/login">
+               Log In
+            </Link>
           </button>
           <button className="p-2 px-5 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            <Link to='signup'>
             Sign Up
+            </Link>
           </button>
         </div>
 
